@@ -15,7 +15,7 @@ if (!global.activities) {
 function generateUserSummaries(activitiesData: any[]) {
   const userMap = new Map();
 
-  activitiesData.forEach(activity => {
+  activitiesData.forEach((activity: any) => {
     if (!userMap.has(activity.user)) {
       userMap.set(activity.user, {
         user: activity.user,
@@ -66,7 +66,7 @@ function createSummaryTable(userSummaries: any[]) {
   table += 'ชื่อผู้ใช้ ลา ส่งเงิน กิจกรรมพิเศษยอดรวม(บาท)\n';
   table += '─'.repeat(80) + '\n';
 
-  userSummaries.forEach(user => {
+  userSummaries.forEach((user: any) => {
     const leaveCount = user.leaveCount || 0;
     const paymentCount = user.paymentCount || 0;
     const customCount = user.customActivities.length || 0;
@@ -86,7 +86,7 @@ function createDetailedDates(userSummaries: any[]) {
   details += '📅 รายละเอียดวันที่\n';
   details += '═'.repeat(80) + '\n';
 
-  userSummaries.forEach(user => {
+  userSummaries.forEach((user: any) => {
     details += `👤 ${user.user}\n`;
     
     if (user.leaveDates.length > 0) {
@@ -99,7 +99,7 @@ function createDetailedDates(userSummaries: any[]) {
 
     if (user.customActivities.length > 0) {
       details += `  🎉 กิจกรรมพิเศษ:\n`; // New line after header
-      user.customActivities.forEach(activity => {
+      user.customActivities.forEach((activity: string) => {
         details += `    ${activity}\n`; // Each activity on a new line with indentation
       });
     }
