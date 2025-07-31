@@ -4,6 +4,25 @@ import React, { useParams } from 'next/navigation';
 import { useState } from 'react';
 import axios from 'axios';
 
+// Type definitions for JSX
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      div: any;
+      span: any;
+      button: any;
+      input: any;
+      label: any;
+      h1: any;
+      h2: any;
+      h3: any;
+      h4: any;
+      p: any;
+      br: any;
+    }
+  }
+}
+
 // Toast Component
 const Toast = ({ message, type, isVisible, onClose }: { message: string; type: 'success' | 'error'; isVisible: boolean; onClose: () => void }) => {
   if (!isVisible) return null;
