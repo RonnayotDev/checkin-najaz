@@ -340,7 +340,7 @@ export default function UserPage() {
         <input
           type="number"
           value={amount}
-          onChange={(e) => setAmount(e.target.value)}
+                     onChange={(e: ChangeEvent<HTMLInputElement>) => setAmount(e.target.value)}
           className="w-full border border-blue-300 rounded p-2 mb-4 text-black"
           placeholder="กรอกจำนวนเงิน"
         />
