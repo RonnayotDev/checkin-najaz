@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useParams } from 'next/navigation';
+import { ChangeEvent } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -239,7 +240,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdrop15}
-                onChange={(e) => setAirdrop15(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdrop15(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">15.00</span>
@@ -248,7 +249,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdrop19}
-                onChange={(e) => setAirdrop19(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdrop19(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">19.00</span>
@@ -257,7 +258,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdrop21}
-                onChange={(e) => setAirdrop21(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdrop21(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">21.00</span>
@@ -266,7 +267,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdrop00}
-                onChange={(e) => setAirdrop00(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdrop00(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">00.00</span>
@@ -282,7 +283,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={bank2130}
-                onChange={(e) => setBank2130(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setBank2130(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">21.30</span>
@@ -291,7 +292,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={bank2230}
-                onChange={(e) => setBank2230(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setBank2230(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">22.30</span>
@@ -307,7 +308,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdropColor20}
-                onChange={(e) => setAirdropColor20(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdropColor20(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">20.00</span>
@@ -316,7 +317,7 @@ export default function UserPage() {
               <input
                 type="checkbox"
                 checked={airdropColor22}
-                onChange={(e) => setAirdropColor22(e.target.checked)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setAirdropColor22(e.target.checked)}
                 className="mr-2"
               />
               <span className="text-sm text-black">22.00</span>
